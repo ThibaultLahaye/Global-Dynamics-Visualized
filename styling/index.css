@@ -1,0 +1,45 @@
+@import url(./map.css);
+@import url(./barcharts.css);
+@import url(./details.css);
+
+/**
+ * Be aware: only the last defined property, in the order they are imported, is kept. 
+ * So please use prefixes in id and class names to prevent name clashes.
+ * E.g. mp for map, bc for barcharts, dt for details
+ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 4fr 3fr;
+    grid-template-columns: 1.1fr 1.1fr 0.9fr;
+    background-color: black;
+}
+.mp-container {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+.bc-container:first {
+    grid-column: 1;
+    grid-row: 2;
+}
+.bc-container:nth-last-of-type(1) {
+    grid-column: 1;
+    grid-row: 2;
+}
+.dt-container {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+.info-container {
+    background-color: #2a2a2a;
+}
